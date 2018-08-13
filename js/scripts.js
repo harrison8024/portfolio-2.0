@@ -110,9 +110,9 @@
 		
         $(window).load(function(){
         $(".typing").typed({
-            strings: ["I am A Freelancer.", "I Design Websites.", "I Live in New York."],    /* You can change the home section typing text from
+            strings: ["I am A Web Developer.", "I am A Software Engineer.", "I Love Physics.", "I Solve Problems."],    /* You can change the home section typing text from
 	                                                                                            here and do not use "&" use "and" */
-            typeSpeed: 50
+            typeSpeed: 30
           });
          });
         
