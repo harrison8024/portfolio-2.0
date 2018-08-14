@@ -739,7 +739,7 @@ ul.portfolio li.active {
   transition: all 0.3s ease-in-out;
   position: relative;
   top: 0px;
-  padding: 60px 40px 60px 40px;
+  padding: 20px;
   margin-top: 32px;
 }
 
