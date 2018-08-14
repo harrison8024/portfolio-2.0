@@ -53,12 +53,12 @@ body {
 }
 
 ::selection {
-    background-color: #24b662;
+    background-color: #567dbc;
     color: #ffffff;
 }
 
 ::-moz-selection {
-    background-color: #24b662;
+    background-color: #567dbc;
     color: #ffffff;
 }
 
@@ -539,7 +539,7 @@ ul.portfolio li:hover {
 
 ul.portfolio li.active {
     color: #ffffff;
-    background-color: #24b662;
+    background-color: #567dbc;
     padding: 5px 20px;
     border-radius: 20px;
     box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
@@ -578,7 +578,7 @@ ul.portfolio li.active {
   opacity: 0;
   left: 0%;
   right: 0%;
-  background-color: #24b662;
+  background-color: #567dbc;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -595,7 +595,7 @@ ul.portfolio li.active {
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
 	margin-top: 40px;
     font-size: 50px;
-    background-color: #24b662;
+    background-color: #567dbc;
     width: 44px;
 	right: 0px;
 }
@@ -637,7 +637,7 @@ ul.portfolio li.active {
 .testimonial-word h2 {
     font-size: 12px;
     text-transform: uppercase;
-	color: #24b662;
+	color: #567dbc;
     font-weight: 700;
     letter-spacing: 4px;
     margin: 20px 0px;
@@ -648,7 +648,7 @@ ul.portfolio li.active {
 }
 
 .owl-navi {
-	color: #24b662;
+	color: #567dbc;
 }
 
 .owl-navi:hover {
@@ -726,7 +726,7 @@ ul.portfolio li.active {
 }
 
 .services-section hr {
-  border-bottom: 2px solid #24b662;
+  border-bottom: 2px solid #567dbc;
   width: 42px;
   margin-left: 0px;
 }
@@ -829,14 +829,14 @@ ul.portfolio li.active {
 }
 
 .form-control:focus {
-	border-color: #24b662;
+	border-color: #567dbc;
 	border-width: 2px;
 }
 
 .map {
     width: 100%;
     height: 340px;
-    border: 1px solid #24b662;
+    border: 1px solid #567dbc;
 }
 
 
@@ -1021,10 +1021,10 @@ ul.portfolio li.active {
         padding: 11px 15px;
     }
     .navigation-menu .navbar-nav li a:hover {
-        color: #24b662;
+        color: #567dbc;
     }
     .navigation-background .navigation-menu .navbar-nav li a:hover {
-        color: #24b662;
+        color: #567dbc;
     }
     .navigation-background .navigation-menu .navbar-nav li a {
         padding: 11px 15px;
@@ -1460,7 +1460,7 @@ ul.portfolio li.active {
 }
 
 .uipasta-credit a {
-    color: #24b662;
+    color: #567dbc;
     font-weight: 600;
 }
 
