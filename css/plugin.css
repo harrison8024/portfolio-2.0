@@ -36,7 +36,7 @@
   opacity: 0.8; }
 
 .mfp-wrap {
-  top: 0;
+  top: 9%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -67,7 +67,6 @@
 .mfp-content {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
   margin: 0 auto;
   text-align: left;
   z-index: 1045; }
@@ -270,7 +269,7 @@ button::-moz-focus-inner {
 img.mfp-img {
   width: auto;
   max-width: 100%;
-  height: auto;
+  max-height: 620px;
   display: block;
   line-height: 0;
   box-sizing: border-box;
