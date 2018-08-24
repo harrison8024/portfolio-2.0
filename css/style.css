@@ -76,6 +76,7 @@ a {
 }
 
 img {
+    height:100%;
     width: 100%;
 }
 
@@ -758,10 +759,6 @@ ul.portfolio li.active {
 
 .icon-image{
     height:100px;
-}
-
-.icon-vertical-center{
-    margin: 14px 0px;    
 }
 
 
