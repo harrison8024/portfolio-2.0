@@ -409,7 +409,7 @@ body.loaded #preloader{
     transition: all 0.4s ease-out;
 }
 
-.row img {
+.header-top-area img {
     width: 50px;
     padding-top: 15px;
 }
@@ -1011,7 +1011,7 @@ ul.portfolio li.active {
      .footer-section p {
          text-align: center !important;
      }
-     .row img {
+     .header-top-area img {
         width: 50px;
         padding-top: 20px;
     }
@@ -1082,7 +1082,7 @@ ul.portfolio li.active {
     .contact-us-detail {
         margin-bottom: 30px;
     }
-    .row img {
+    .header-top-area img {
         display: none;
     }
 }
