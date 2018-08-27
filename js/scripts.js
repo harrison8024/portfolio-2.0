@@ -223,4 +223,24 @@
 		   
             });
 
+
+            $('form').on('submit', function(event){
+                event.preventDefault();
+                console.log("submit");
+                let data = {
+                    name: $("#name").val(),
+                    email: $("#email").val(),
+                    subject: $("#subject").val(),
+                    body: $("#body").val()
+                };
+                $.ajax({
+                    type: "POST",
+                    url: "mail_handler.php",
+                    data: data,
+                    dataType: "JSON",
+                    success: function(response){
+                        console.log(response);
+                    }
+                });
+            });
    })(jQuery);
