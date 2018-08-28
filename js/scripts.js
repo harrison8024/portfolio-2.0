@@ -226,26 +226,35 @@
 
             $('form').on('submit', function(event){
                 event.preventDefault();
-                let data = {
-                    name: $("#name").val(),
-                    email: $("#email").val(),
-                    subject: $("#subject").val(),
-                    body: $("#body").val()
-                };
-                $.ajax({
-                    type: "POST",
-                    url: "mail_handler.php",
-                    data: data,
-                    cache: false,
-                    success: function(){
-                        $(".form-message").empty();
-                        $(".form-message").text("Message Sent!").addClass("message-success");
-                    },
-                    error: function(){
-                        $(".form-message").empty();
-                        $(".form-message").text("Error: Failed to send message.").addClass("message-error");
-                    }
+                let name = $("#name").val();
+                let email = $("#email").val();
+                let subject = $("#subject").val();
+                let body = $("#body").val();
+                let regexLiteral = /.+@.+/;
+                if(name && regexLiteral.test(email) && subject && body){
+                    let data = {
+                        name: $("#name").val(),
+                        email: $("#email").val(),
+                        subject: $("#subject").val(),
+                        body: $("#body").val()
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: "mail_handler.php",
+                        data: data,
+                        cache: false,
+                        success: function(){
+                            $(".form-message").empty();
+                            $(".form-message").text("Message Sent!").addClass("message-success");
+                        },
+                        error: function(){
+                            $(".form-message").empty();
+                            $(".form-message").text("Error: Failed to send message.").addClass("message-error");
+                        }
 
-                });
+                    });
+                } else {
+                    console.log("not valid");
+                }
             });
    })(jQuery);
