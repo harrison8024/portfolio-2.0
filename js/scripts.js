@@ -226,21 +226,50 @@
 
             $('form').on('submit', function(event){
                 event.preventDefault();
-                console.log("submit");
-                let data = {
-                    name: $("#name").val(),
-                    email: $("#email").val(),
-                    subject: $("#subject").val(),
-                    body: $("#body").val()
-                };
-                $.ajax({
-                    type: "POST",
-                    url: "mail_handler.php",
-                    data: data,
-                    dataType: "JSON",
-                    success: function(response){
-                        console.log(response);
+                let name = $("#name").val();
+                let email = $("#email").val();
+                let subject = $("#subject").val();
+                let body = $("#body").val();
+                let regexLiteral = /.+@.+/;
+                if(name && regexLiteral.test(email) && subject && body){
+                    let data = {
+                        name: $("#name").val(),
+                        email: $("#email").val(),
+                        subject: $("#subject").val(),
+                        body: $("#body").val()
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: "mail_handler.php",
+                        data: data,
+                        cache: false,
+                        success: function(){
+                            $(".form-message").empty();
+                            $(".form-message").text("Message Sent!").addClass("message-success");
+                        },
+                        error: function(){
+                            $(".form-message").empty();
+                            $(".form-message").text("Error: Failed to send message.").addClass("message-error");
+                        }
+
+                    });
+                } else {
+                    console.log("not valid");
+                    if(!name){
+                        $(".message-name").text("I would like to know your name.").addClass("message-error");
                     }
-                });
+                    if(!email){
+                        $(".message-email").text("Please enter your email!").addClass("message-error");
+                    } else if(regexLiteral.test(email)){
+                        $(".message-email").text("Email not valid.").addClass("message-error");
+                    }
+                    if(!subject){
+                        $(".message-subject").text("Subject line empty").addClass("message-error");
+                    }
+                    if(!body){
+                        $(".message-body").text("You can ask me any question!").addClass("message-error");
+
+                    }
+                }
             });
    })(jQuery);

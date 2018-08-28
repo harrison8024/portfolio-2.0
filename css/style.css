@@ -229,8 +229,6 @@ fieldset {
 	color: #000000;
 }
 
-
-
 /* Preloader */
 
 #preloader {
@@ -847,6 +845,23 @@ ul.portfolio li.active {
     border: 1px solid #567dbc;
 }
 
+.message-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.message-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.form-message {
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
 
 
 /* Social Icons */
