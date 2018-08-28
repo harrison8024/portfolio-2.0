@@ -76,7 +76,6 @@ a {
 }
 
 img {
-    height:100%;
     width: 100%;
 }
 
@@ -360,8 +359,6 @@ body.loaded #preloader{
     vertical-align: middle;
 }
 
-.header-text {}
-
 .home-section-background h2 {
     color: #f8f8f8;
     font-size: 50px;
@@ -498,8 +495,6 @@ body.loaded #preloader{
 	position: absolute;
 }
 
-.about-me {}
-
 .about-me h2 {
 	padding: 0px 50px;
 }
@@ -512,8 +507,6 @@ body.loaded #preloader{
 
 
 /* Portfolio */
-
-.portfolio {}
 
 .portfolio-inner .mix {
     display: none;
@@ -567,37 +560,26 @@ ul.portfolio li.active {
     transition: .3s;
 }
 
-.portfolio .item:hover a:before{
-  top: 40%;
-  box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
-  -webkit-transition: all 400ms ease-in-out;
-          transition: all 400ms ease-in-out;
+.portfolio-hover {
+    color: #ffffff;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    font-size: 25px;
+    top: 2%;
+    opacity: 0;
+    left: 0%;
+    right: 0%;
+    background-color: #567dbc;
+    line-height: 70px;
 }
 
-.portfolio .item a:before{
-  color: #ffffff;
-  content: "\f00e";
-  font-family: "FontAwesome";
-  text-align: center;
-  color: #ffffff;
-  position: absolute;
-  font-size: 25px;
-  top: 2%;
-  opacity: 0;
-  left: 0%;
-  right: 0%;
-  background-color: #567dbc;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  line-height: 70px;
-  margin: 0 auto;
-  -webkit-transition: all 400ms ease-in-out;
-          transition: all 400ms ease-in-out;
-}
-
-.portfolio .item a:hover:before{
-  opacity: 1;
+.item:hover .portfolio-hover{
+    top: 40%;
+    box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+    -webkit-transition: all 400ms ease-in-out;
+            transition: all 400ms ease-in-out;
+    opacity: 1;
 }
 
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
@@ -768,26 +750,15 @@ ul.portfolio li.active {
     height:100px;
 }
 
-
-
-/* Call to Action */
-
-.call-to-action {
+.icon-image > img {
+    height: 100%;
 }
-
-.call-to-action h2 {
-	font-size: 30px;
-}
-
 
 
 /* Contact Us */
 
 .contact-us {
 	background-color: #f9f9f9;
-}
-
-.contact-us-detail {
 }
 
 .contact-us-detail i {
@@ -919,65 +890,14 @@ ul.portfolio li.active {
   line-height: inherit;
 }
 
-.facebook {
-   background-color: #3b5998;
-}
-
-.twitter {
-   background-color: #1da1f2;
-}
-
-.google-plus {
-   background-color: #dd4b39;
-}
-
-.instagram {
-   background-color: #464545;
-}
-
 .linkedin {
    background-color: #0077b5;
-}
-
-.pinterest {
-   background-color: #bd081c;
-}
-
-.youtube {
-   background-color: #cd201f;
-}
-
-.vimeo {
-   background-color: #1ab7ea;
-}
-
-.dribbble {
-   background-color: #ea4c89;
-}
-
-.behance {
-   background-color: #1769ff;
-}
-
-.flickr {
-   background-color: #ff0084;
-}
-
-.tumblr {
-   background-color: #35465c;
-}
-
-.foursquare {
-   background-color: #f94877;
 }
 
 .github {
    background-color: #333333;
 }
 
-.skype {
-   background-color: #00aff0;
-}
 
 
 
@@ -1489,20 +1409,4 @@ ul.portfolio li.active {
 
 .bg-color-6 {
 	background-color: #08a6f3;
-}
-
-
-
-/* UiPasta Credit */
-
-.uipasta-credit {
-}
-
-.uipasta-credit a {
-    color: #567dbc;
-    font-weight: 600;
-}
-
-.uipasta-credit a:hover {
-    color: #ffffff;
 }
