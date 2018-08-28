@@ -849,20 +849,19 @@ ul.portfolio li.active {
     color: #3c763d;
     background-color: #dff0d8;
     border-color: #d6e9c6;
-    margin-right: 15px;
-    margin-left: 15px;
-    border-radius: 5px;
 }
 
 .message-error {
     color: #a94442;
     background-color: #f2dede;
     border-color: #ebccd1;
+}
+
+.form-message {
     margin-right: 15px;
     margin-left: 15px;
     border-radius: 5px;
 }
-
 
 
 /* Social Icons */
