@@ -81,7 +81,7 @@ img {
 }
 
 a:hover {
-    color: #fff;
+    color: #d36060;
     text-decoration: none;
 }
 
@@ -111,7 +111,7 @@ fieldset {
 }
 
 .section-space-padding {
-    padding: 100px 0px;
+    padding: 20px 0px;
 }
 
 .section-title {
