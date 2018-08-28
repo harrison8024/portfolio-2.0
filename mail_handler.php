@@ -61,4 +61,6 @@ if(!$mail->send()) {
     $output['message'] = 'Message has been sent';
     $output['success'] = true;
 }
+
+print(json_encode($output));
 ?>

@@ -226,7 +226,6 @@
 
             $('form').on('submit', function(event){
                 event.preventDefault();
-                console.log("submit");
                 let data = {
                     name: $("#name").val(),
                     email: $("#email").val(),
@@ -237,10 +236,16 @@
                     type: "POST",
                     url: "mail_handler.php",
                     data: data,
-                    dataType: "JSON",
-                    success: function(response){
-                        console.log(response);
+                    cache: false,
+                    success: function(){
+                        $(".form-message").empty();
+                        $(".form-message").text("Message Sent!").addClass("message-success");
+                    },
+                    error: function(){
+                        $(".form-message").empty();
+                        $(".form-message").text("Error: Failed to send message.").addClass("message-error");
                     }
+
                 });
             });
    })(jQuery);
