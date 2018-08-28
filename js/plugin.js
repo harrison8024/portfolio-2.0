@@ -132,9 +132,6 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 
 
 
-
-
-
 /*
  * jQuery.appear
  * https://github.com/bas2k/jquery.appear/
