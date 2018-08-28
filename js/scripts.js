@@ -36,16 +36,16 @@
 
     jQuery(document).ready(function () {
 
-        
-       /* Preloader */
-		
-        $(window).on('load', function() {
-          $('body').addClass('loaded');
+
+        /* Preloader */
+
+        $(window).on('load', function () {
+            $('body').addClass('loaded');
         });
-		
-		
-		
-       /* Smooth Scroll */
+
+
+
+        /* Smooth Scroll */
 
         $('a.smoth-scroll').on("click", function (e) {
             var anchor = $(this);
@@ -54,12 +54,12 @@
             }, 1000);
             e.preventDefault();
         });
-		
 
 
-       
-       /* Scroll Naviagation Background Change with Sticky Navigation */
-		 
+
+
+        /* Scroll Naviagation Background Change with Sticky Navigation */
+
         $(window).on('scroll', function () {
             if ($(window).scrollTop() > 100) {
                 $('.header-top-area').addClass('navigation-background');
@@ -67,12 +67,12 @@
                 $('.header-top-area').removeClass('navigation-background');
             }
         });
-		
-		
-		
-		
-       /* Mobile Navigation Hide or Collapse on Click */
-		
+
+
+
+
+        /* Mobile Navigation Hide or Collapse on Click */
+
         $(document).on('click', '.navbar-collapse.in', function (e) {
             if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
                 $(this).collapse('hide');
@@ -81,42 +81,42 @@
         $('body').scrollspy({
             target: '.navbar-collapse',
             offset: 195
-        
-		 });
-		 
-		
-		
-		
+
+        });
+
+
+
+
         /* Scroll To Top */
-		
-        $(window).scroll(function(){
-        if ($(this).scrollTop() >= 500) {
-            $('.scroll-to-top').fadeIn();
-         } else {
-            $('.scroll-to-top').fadeOut();
-         }
-	   });
-	
-	
-	    $('.scroll-to-top').click(function(){
-		  $('html, body').animate({scrollTop : 0},800);
-		  return false;
-	    });
-		
-		
-		
-		
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 500) {
+                $('.scroll-to-top').fadeIn();
+            } else {
+                $('.scroll-to-top').fadeOut();
+            }
+        });
+
+
+        $('.scroll-to-top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+
+
+
+
         /* Typed.js */
-		
-        $(window).load(function(){
-        $(".typing").typed({
-            strings: ["I am A Web Developer.", "I am A Software Engineer.", "I Love Physics.", "I Solve Problems."],    /* You can change the home section typing text from
+
+        $(window).load(function () {
+            $(".typing").typed({
+                strings: ["I am A Web Developer.", "I am A Software Engineer.", "I Love Physics.", "I Solve Problems."],    /* You can change the home section typing text from
 	                                                                                            here and do not use "&" use "and" */
-            typeSpeed: 30
-          });
-         });
-        
-		 
+                typeSpeed: 30
+            });
+        });
+
+
         /* Parallax Background */
 
         $(window).stellar({
@@ -127,157 +127,120 @@
             verticalOffset: 0,
         });
 
-        
-		
-		
+
+
+
         /* Portfolio Filtering */
 
         $('.portfolio-inner').mixItUp();
 
 
-       
+
         /* Magnific Popup */
 
         $('.portfolio-popup').magnificPopup({
             type: 'image',
-			
+
             gallery: { enabled: true },
-			zoom: { enabled: true,
-			        duration: 500
-					
-          },
-		  
-         image:{
-               markup: '<div class="mfp-figure portfolio-pop-up">'+
-               '<div class="mfp-close"></div>'+
-               '<div class="mfp-img"></div>'+
-               '<div class="mfp-bottom-bar portfolio_title">'+
-               '<div class="mfp-title"></div>'+
-               '<div class="mfp-counter"></div>'+
-               '</div>'+
-               '</div>',
+            zoom: {
+                enabled: true,
+                duration: 500
 
-               titleSrc:function(item){
-                return item.el.attr('title');
-              }
-            }
-		  
-		  
-          });
+            },
 
-       
-	   
-		 
-        /* Testimonial Carousel/Slider */
+            image: {
+                markup: '<div class="mfp-figure portfolio-pop-up">' +
+                    '<div class="mfp-close"></div>' +
+                    '<div class="mfp-img"></div>' +
+                    '<div class="mfp-bottom-bar portfolio_title">' +
+                    '<div class="mfp-title"></div>' +
+                    '<div class="mfp-counter"></div>' +
+                    '</div>' +
+                    '</div>',
 
-        $(".testimonial-carousel-list").owlCarousel({
-            items: 1,
-            autoPlay: true,
-            stopOnHover: false,
-            navigation: true,
-            navigationText: ["<i class='fa fa-long-arrow-left fa-2x owl-navi'></i>", "<i class='fa fa-long-arrow-right fa-2x owl-navi'></i>"],
-            itemsDesktop: [1199, 1],
-            itemsDesktopSmall: [980, 1],
-            itemsTablet: [768, 1],
-            itemsTabletSmall: false,
-            itemsMobile: [479, 1],
-            autoHeight: true,
-            pagination: false,
-            transitionStyle : "backSlide"
-        });
-		
-		
-		
-		
-        /* Statistics Counter */
-		
-        $('.statistics').appear(function() {
-           var counter = $(this).find('.statistics-count');
-           var toCount = counter.data('count');
-      
-           $(counter).countTo({
-           from: 0,
-           to: toCount,
-           speed: 5000,
-           refreshInterval: 50
-           })
-           });
-		   
-		  
-         
-         /* Google Map */
-		 
-         $('#my-address').gMap({
-            zoom: 5,
-            scrollwheel: true,
-            maptype: 'ROADMAP',
-            markers:[
-            {
-            address: "New York",  /* You can change your address from here */
-            html: "<b>Address</b>: <br> Area-2, Rose Area, New York, U.S.A.",   /* You can change display address text from here */
-            popup: true
-            }
-            ]
-            });
-              
-		   
-            });
-
-            $(".form-control").on("keydown", function(){
-                $(`.message-${this.id}`).empty().removeClass("message-error");
-            });
-
-            $("form").on("submit", function(event){
-                event.preventDefault();
-                let name = $("#name").val();
-                let email = $("#email").val();
-                let subject = $("#subject").val();
-                let body = $("#body").val();
-                let regexLiteral = /.+@.+/;
-                $(".form-message").empty().removeClass("message-error").removeClass("message-success");
-                $(".message-name").empty().removeClass("message-error");
-                $(".message-email").empty().removeClass("message-error");
-                $(".message-subject").empty().removeClass("message-error");
-                $(".message-body").empty().removeClass("message-error");
-                if(name && regexLiteral.test(email) && subject && body){
-                   $("html, body").addClass("waiting");
-                    let data = {
-                        name: $("#name").val(),
-                        email: $("#email").val(),
-                        subject: $("#subject").val(),
-                        body: $("#body").val()
-                    };
-                    $.ajax({
-                        type: "POST",
-                        url: "mail_handler.php",
-                        data: data,
-                        cache: false,
-                        success: function(){
-                            $(".form-message").text("Message Sent!").addClass("message-success");
-                            $("html, body").removeClass("waiting");
-                        },
-                        error: function(){
-                            $(".form-message").text("Error: Failed to send message.").addClass("message-error");
-                            $("html, body").removeClass("waiting");
-                        }
-
-                    });
-                } else {
-                    if(!name){
-                        $(".message-name").text("Name field empty.").addClass("message-error");
-                    }
-                    if(!email){
-                        $(".message-email").text("Please enter your email").addClass("message-error");
-                    } else if(!regexLiteral.test(email)){
-                        $(".message-email").text("Email not valid.").addClass("message-error");
-                    }
-                    if(!subject){
-                        $(".message-subject").text("Subject line empty").addClass("message-error");
-                    }
-                    if(!body){
-                        $(".message-body").text("Please enter a message!").addClass("message-error");
-
-                    }
+                titleSrc: function (item) {
+                    return item.el.attr('title');
                 }
+            }
+
+
+        });
+
+
+
+
+        /* Statistics Counter */
+
+        $('.statistics').appear(function () {
+            var counter = $(this).find('.statistics-count');
+            var toCount = counter.data('count');
+
+            $(counter).countTo({
+                from: 0,
+                to: toCount,
+                speed: 5000,
+                refreshInterval: 50
+            })
+        });
+
+
+    });
+
+    $(".form-control").on("keydown", function () {
+        $(`.message-${this.id}`).empty().removeClass("message-error");
+    });
+
+    $("form").on("submit", function (event) {
+        event.preventDefault();
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let subject = $("#subject").val();
+        let body = $("#body").val();
+        let regexLiteral = /.+@.+/;
+        $(".form-message").empty().removeClass("message-error").removeClass("message-success");
+        $(".message-name").empty().removeClass("message-error");
+        $(".message-email").empty().removeClass("message-error");
+        $(".message-subject").empty().removeClass("message-error");
+        $(".message-body").empty().removeClass("message-error");
+        if (name && regexLiteral.test(email) && subject && body) {
+            $("html, body").addClass("waiting");
+            let data = {
+                name: $("#name").val(),
+                email: $("#email").val(),
+                subject: $("#subject").val(),
+                body: $("#body").val()
+            };
+            $.ajax({
+                type: "POST",
+                url: "mail_handler.php",
+                data: data,
+                cache: false,
+                success: function () {
+                    $(".form-message").text("Message Sent!").addClass("message-success");
+                    $("html, body").removeClass("waiting");
+                },
+                error: function () {
+                    $(".form-message").text("Error: Failed to send message.").addClass("message-error");
+                    $("html, body").removeClass("waiting");
+                }
+
             });
-   })(jQuery);
+        } else {
+            if (!name) {
+                $(".message-name").text("Name field empty.").addClass("message-error");
+            }
+            if (!email) {
+                $(".message-email").text("Please enter your email").addClass("message-error");
+            } else if (!regexLiteral.test(email)) {
+                $(".message-email").text("Email not valid.").addClass("message-error");
+            }
+            if (!subject) {
+                $(".message-subject").text("Subject line empty").addClass("message-error");
+            }
+            if (!body) {
+                $(".message-body").text("Please enter a message!").addClass("message-error");
+
+            }
+        }
+    });
+})(jQuery);
