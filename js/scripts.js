@@ -255,6 +255,7 @@
                     });
                 } else {
                     console.log("not valid");
+                    
                 }
             });
    })(jQuery);
