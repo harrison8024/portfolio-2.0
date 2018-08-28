@@ -612,6 +612,11 @@ ul.portfolio li.active {
     cursor: inherit;
 }
 
+.app-link {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+}
 
 
 /* Testimonial */
