@@ -223,14 +223,22 @@
 		   
             });
 
+            $(".form-control").on("keydown", function(){
+                $(`.message-${this.id}`).empty().removeClass("message-error");
+            });
 
-            $('form').on('submit', function(event){
+            $("form").on("submit", function(event){
                 event.preventDefault();
                 let name = $("#name").val();
                 let email = $("#email").val();
                 let subject = $("#subject").val();
                 let body = $("#body").val();
                 let regexLiteral = /.+@.+/;
+                $(".form-message").empty().removeClass("message-error").removeClass("message-success");
+                $(".message-name").empty().removeClass("message-error");
+                $(".message-email").empty().removeClass("message-error");
+                $(".message-subject").empty().removeClass("message-error");
+                $(".message-body").empty().removeClass("message-error");
                 if(name && regexLiteral.test(email) && subject && body){
                     let data = {
                         name: $("#name").val(),
@@ -244,30 +252,27 @@
                         data: data,
                         cache: false,
                         success: function(){
-                            $(".form-message").empty();
                             $(".form-message").text("Message Sent!").addClass("message-success");
                         },
                         error: function(){
-                            $(".form-message").empty();
                             $(".form-message").text("Error: Failed to send message.").addClass("message-error");
                         }
 
                     });
                 } else {
-                    console.log("not valid");
                     if(!name){
-                        $(".message-name").text("I would like to know your name.").addClass("message-error");
+                        $(".message-name").text("Name field empty.").addClass("message-error");
                     }
                     if(!email){
-                        $(".message-email").text("Please enter your email!").addClass("message-error");
-                    } else if(regexLiteral.test(email)){
+                        $(".message-email").text("Please enter your email").addClass("message-error");
+                    } else if(!regexLiteral.test(email)){
                         $(".message-email").text("Email not valid.").addClass("message-error");
                     }
                     if(!subject){
                         $(".message-subject").text("Subject line empty").addClass("message-error");
                     }
                     if(!body){
-                        $(".message-body").text("You can ask me any question!").addClass("message-error");
+                        $(".message-body").text("Please enter a message!").addClass("message-error");
 
                     }
                 }
