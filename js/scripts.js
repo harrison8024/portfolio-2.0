@@ -240,6 +240,7 @@
                 $(".message-subject").empty().removeClass("message-error");
                 $(".message-body").empty().removeClass("message-error");
                 if(name && regexLiteral.test(email) && subject && body){
+                   $("html, body").addClass("waiting");
                     let data = {
                         name: $("#name").val(),
                         email: $("#email").val(),
@@ -253,9 +254,11 @@
                         cache: false,
                         success: function(){
                             $(".form-message").text("Message Sent!").addClass("message-success");
+                            $("html, body").removeClass("waiting");
                         },
                         error: function(){
                             $(".form-message").text("Error: Failed to send message.").addClass("message-error");
+                            $("html, body").removeClass("waiting");
                         }
 
                     });

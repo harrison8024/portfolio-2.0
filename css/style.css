@@ -144,6 +144,10 @@ fieldset {
 	cursor: url(../images/owl-carousel/grabbing.png) 8 8, move;
 }
 
+.waiting {
+    cursor: wait;
+}
+
 .button {
 	border: none;
 	font-family: inherit;
