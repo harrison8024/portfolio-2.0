@@ -137,36 +137,48 @@
 
 
         /* Magnific Popup */
+        // $('.portfolio-popup').magnificPopup({
+        //     type: 'image',
 
-        $('.portfolio-popup').magnificPopup({
-            type: 'image',
+        //     image: {
+        //         markup: '<div class="mfp-figure portfolio-pop-up">' +
+        //             `<div class="mfp-info"></div>` +
+        //             '<div class="mfp-close"></div>' +
+        //             '<div class="mfp-img"></div>' +
+        //             '<div class="mfp-bottom-bar portfolio_title">' +
+        //             '<div class="mfp-title"></div>' +
+        //             '<div class="mfp-counter"></div>' +
+        //             '</div>' +
+        //             '</div>',
 
-            gallery: { enabled: true },
-            zoom: {
-                enabled: true,
-                duration: 500
+        //         titleSrc: function (item) {
+        //             return item.el.attr('title');
+        //         }
+        //     },
 
-            },
+        // });
 
-            image: {
-                markup: '<div class="mfp-figure portfolio-pop-up">' +
-                    '<div class="mfp-close"></div>' +
-                    '<div class="mfp-img"></div>' +
-                    '<div class="mfp-bottom-bar portfolio_title">' +
-                    '<div class="mfp-title"></div>' +
-                    '<div class="mfp-counter"></div>' +
-                    '</div>' +
-                    '</div>',
+        function popupModal(){
 
-                titleSrc: function (item) {
-                    return item.el.attr('title');
-                }
-            }
+        }
 
+        $(".portfolio-popup").on("click", function(){
+            let modalScreen = $("<div>").addClass("modal-screen");
+            let modal = $("<div>").addClass("modal-box");
+            let img = $("<img>").attr("src", "images/pureproduct-screenshot.png");
+            let imgDiv = $("<div>").append(img).addClass("modal-img");
+            let close = $("<button>").text("×").addClass("mfp-close");
+            close.on("click", function(){
+                modalScreen.remove();
+                modal.remove();
+            })
+            modal.append(imgDiv);
+            imgDiv.append(close);
+            $("body").prepend(modalScreen);
+            $("body").prepend(modal)
+        })
 
-        });
-
-
+        $(".portfolio-hover").on("click", popupModal);
 
 
         /* Statistics Counter */
