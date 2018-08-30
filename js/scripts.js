@@ -163,7 +163,7 @@
                 title: "Pure Products",
                 imgTop: "images/pureproduct-screenshot.png",
                 imgBottom: "images/pureproduct-screenshot.png",
-                detailTop: "Pure Products is a application that helps people identify and find cosmetic products that are safe and gentle for your skin. The application uses two different database to compare and rate each ingredient in the product.",
+                detailTop: "Pure Products is an application that helps people identify and find cosmetic products that are safe and gentle for your skin. The application uses two different database to compare and rate each ingredient in the product.",
                 detailBottom: "Pure Products utilizes React.js, PHP, MySQL, AWS, and API's to help people find the right cosmetic product for their skins!",
                 live: `<div><i class="fa fa-desktop"></i><a href="http://findpureproducts.com" target="_blank">Live</a></div>`,
                 code: `<div><i class="fa fa-github"></i> <a href="https://github.com/aliawilkinson/c318_pureproduct" target="_blank">Github</a></div>`
@@ -172,8 +172,8 @@
                 title: "Laguna Matata",
                 imgTop:"images/laguna-matata-1.png",
                 imgBottom:"images/laguna-matata-2.png",
-                detailTop:"Laguna Matata",
-                detailBottom: "Laguna Matata",
+                detailTop:"Laguna Matata is an application that helps beachgoers discover some of the more exclusive and less know beaches and coves of Laguana City, CA. Locals and visitors no longer need to worry where to go when they come visit Laguna Beach.",
+                detailBottom: "Laguna Matata utilizds JavaScript, JQuery, AJAX, Goole API, Yelp API, and Dark Sky API to help poeple find the best beach and where to go around it!",
                 live:`<div><i class="fa fa-desktop"></i><a href="http://laguna-matata.harrisonbchen.com" target="_blank">Live</a></div>`,
                 code:`<div><i class="fa fa-github"></i> <a href="https://github.com/harrison8024/Laguna-Matata" target="_blank">Github</a></div>`,
             }
