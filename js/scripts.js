@@ -134,29 +134,7 @@
 
         $('.portfolio-inner').mixItUp();
 
-
-
-        /* Magnific Popup */
-        // $('.portfolio-popup').magnificPopup({
-        //     type: 'image',
-
-        //     image: {
-        //         markup: '<div class="mfp-figure portfolio-pop-up">' +
-        //             `<div class="mfp-info"></div>` +
-        //             '<div class="mfp-close"></div>' +
-        //             '<div class="mfp-img"></div>' +
-        //             '<div class="mfp-bottom-bar portfolio_title">' +
-        //             '<div class="mfp-title"></div>' +
-        //             '<div class="mfp-counter"></div>' +
-        //             '</div>' +
-        //             '</div>',
-
-        //         titleSrc: function (item) {
-        //             return item.el.attr('title');
-        //         }
-        //     },
-
-        // });
+        /* Portfolio Details */
 
         const portfolioDetail = [
             {
