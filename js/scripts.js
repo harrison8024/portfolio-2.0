@@ -158,27 +158,90 @@
 
         // });
 
-        function popupModal(){
-
-        }
+        const portfolioDetail = [
+            {
+                title: "Pure Products",
+                imgTop: "images/pureproduct-screenshot.png",
+                imgBottom: "images/pureproduct-screenshot.png",
+                detailTop: "Pure Products is a application that helps people identify and find cosmetic products that are safe and gentle for your skin. The application uses two different database to compare and rate each ingredient in the product.",
+                detailBottom: "Pure Products utilizes React.js, PHP, MySQL, AWS, and API's to help people find the right cosmetic product for their skins!",
+                live: `<div><i class="fa fa-desktop"></i><a href="http://findpureproducts.com" target="_blank">Live</a></div>`,
+                code: `<div><i class="fa fa-github"></i> <a href="https://github.com/aliawilkinson/c318_pureproduct" target="_blank">Github</a></div>`
+            },
+            {
+                title: "Laguna Matata",
+                imgTop:"images/laguna-matata-1.png",
+                imgBottom:"images/laguna-matata-2.png",
+                detailTop:"Laguna Matata",
+                detailBottom: "Laguna Matata",
+                live:`<div><i class="fa fa-desktop"></i><a href="http://laguna-matata.harrisonbchen.com" target="_blank">Live</a></div>`,
+                code:`<div><i class="fa fa-github"></i> <a href="https://github.com/harrison8024/Laguna-Matata" target="_blank">Github</a></div>`,
+            }
+        ]
 
         $(".portfolio-popup").on("click", function(){
+            let appNum = $(this).attr("number");
+            let object = portfolioDetail[appNum]; 
             let modalScreen = $("<div>").addClass("modal-screen");
             let modal = $("<div>").addClass("modal-box");
-            let img = $("<img>").attr("src", "images/pureproduct-screenshot.png");
-            let imgDiv = $("<div>").append(img).addClass("modal-img");
+            let imgTop = $("<img>").attr("src", object.imgTop);
+            let imgTopDiv = $("<div>").addClass("modal-img-div");
+            imgTopDiv.append(imgTop);
+            let imgBottom = $("<img>").attr("src", object.imgBottom);
+            let imgBottomDiv = $("<div>").addClass("modal-img-div");
+            imgBottomDiv.append(imgBottom);
+            let imgDiv = $("<div>").append(imgTopDiv).append(imgBottomDiv).addClass("modal-img");
             let close = $("<button>").text("×").addClass("mfp-close");
+            let info = $("<div>").addClass("modal-info");
+            let title = $("<h1>").addClass("modal-title").text(object.title);
+            let detail = $("<div>").addClass("modal-detail");
+            let detailTop = $("<p>").text(object.detailTop);
+            let detailBottom = $("<p>").text(object.detailBottom);
+            let live = $(object.live);
+            let code = $(object.code);
+            detail.append(detailTop).append(detailBottom).append(live).append(code);
             close.on("click", function(){
                 modalScreen.remove();
                 modal.remove();
             })
             modal.append(imgDiv);
-            imgDiv.append(close);
+            modal.append(info);
+            info.append(close).append(title).append(detail);
             $("body").prepend(modalScreen);
-            $("body").prepend(modal)
-        })
+            $("body").prepend(modal);
+        });
 
-        $(".portfolio-hover").on("click", popupModal);
+        $(".portfolio-hover").on("click", function(){
+            let appNum = $(this).attr("number");
+            let object = portfolioDetail[appNum]; 
+            let modalScreen = $("<div>").addClass("modal-screen");
+            let modal = $("<div>").addClass("modal-box");
+            let imgTop = $("<img>").attr("src", object.imgTop);
+            let imgTopDiv = $("<div>").addClass("modal-img-div");
+            imgTopDiv.append(imgTop);
+            let imgBottom = $("<img>").attr("src", object.imgBottom);
+            let imgBottomDiv = $("<div>").addClass("modal-img-div");
+            imgBottomDiv.append(imgBottom);
+            let imgDiv = $("<div>").append(imgTopDiv).append(imgBottomDiv).addClass("modal-img");
+            let close = $("<button>").text("×").addClass("mfp-close");
+            let info = $("<div>").addClass("modal-info");
+            let title = $("<h1>").addClass("modal-title").text(object.title);
+            let detail = $("<div>").addClass("modal-detail");
+            let detailTop = $("<p>").text(object.detailTop);
+            let detailBottom = $("<p>").text(object.detailBottom);
+            let live = $(object.live);
+            let code = $(object.code);
+            detail.append(detailTop).append(detailBottom).append(live).append(code);
+            close.on("click", function(){
+                modalScreen.remove();
+                modal.remove();
+            })
+            modal.append(imgDiv);
+            modal.append(info);
+            info.append(close).append(title).append(detail);
+            $("body").prepend(modalScreen);
+            $("body").prepend(modal);
+        });
 
 
         /* Statistics Counter */

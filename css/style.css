@@ -179,7 +179,6 @@ fieldset {
 
 .button:before {
 	font-family: 'FontAwesome';
-	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -599,17 +598,6 @@ ul.portfolio li.active {
     cursor: inherit;
 }
 
-.mfp-info {
-    position: absolute;
-    margin: 40px 0;
-    bottom: 0;
-    width: 100%;
-    height: 35%;
-    background-color: white;
-    opacity: 0.8;
-    box-sizing: border-box;
-}
-
 .app-link {
     margin-top: 2%;
     display: flex;
@@ -627,10 +615,12 @@ ul.portfolio li.active {
 
 .modal-box {
     position: fixed;
-    padding:7% 5% 5% 5%;
-    width: 100%;
-    height: 100%;
+    padding:5%;
+    width: 100vw;
+    height: 90%;
+    top:10%;
     z-index:1001;
+    display: inline-flex;
 }
 
 .mfp-close {
@@ -640,8 +630,53 @@ ul.portfolio li.active {
     color: #FFF;
 }
 
-.modal-img{
+.modal-img {
+    width:50%;
+    overflow: hidden;
+    background-color: grey;
+    padding: 10px;
+}
+
+.modal-info {
     position: relative;
+    width: 50%;
+    background-color: grey;
+    height: 100%;
+    padding: 10px;
+}
+
+.modal-title {
+    width:100%;
+    height:10%;
+    color: white;
+}
+
+.modal-detail {
+    padding: 10px;
+    width:100%;
+    height: 90%;
+    background-color: white;
+}
+
+.modal-detail > p {
+    line-height: 24px;
+    margin-bottom: 20px;  
+    letter-spacing: 0px;  
+}
+
+.modal-img-div {
+    height: 46%;
+    margin: 2%;
+}
+
+.modal-img-div > img{
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.modal-detail div {
+    display: inline;
+    margin-right: 5%;
 }
 
 /* Testimonial */
@@ -1068,6 +1103,20 @@ ul.portfolio li.active {
     }
     .header-top-area img {
         display: none;
+    }
+    .modal-img {
+        position: absolute;
+        top: 72%;
+        width: 90%;
+    }
+    .modal-info{
+        width: 100%;
+        height:75%;
+    }
+    .modal-box {
+        display: block;
+        overflow-y: scroll;
+
     }
 }
 
