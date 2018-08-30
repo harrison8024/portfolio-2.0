@@ -503,6 +503,9 @@ body.loaded #preloader{
 	font-size: 15px;
 }
 
+.about-me a{
+    font-weight: bold;
+}
 
 
 /* Portfolio */
@@ -746,7 +749,7 @@ ul.portfolio li.active {
 
 .statistics-section {
 	position: relative;
-    background: url(../images/apple-black-and-white.jpg);
+    background: url(../images/tea-bottle.jpg);
     background-size: cover;
     z-index: 1;
 }
@@ -754,7 +757,7 @@ ul.portfolio li.active {
 .statistics {
   margin: 25px 0;
   overflow: hidden;
-  color: #ffffff;
+  color: white;
 }
 
 .statistics.block .statistics-icon,
@@ -784,10 +787,10 @@ ul.portfolio li.active {
 }
 
 .statistics-content > span {
-  display: block;
-  font-weight: 500;
-  font-size: 12px;
-  letter-spacing: 1px;
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
 
