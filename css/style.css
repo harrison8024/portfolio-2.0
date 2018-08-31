@@ -433,7 +433,7 @@ body.loaded #preloader{
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;
-    padding: 30px 15px;
+    padding: 30px 10px;
     -webkit-transition: .3s;
     transition: .3s;
     font-weight: 600;
@@ -979,6 +979,9 @@ ul.portfolio li.active {
    background-color: #333333;
 }
 
+.resume {
+    background-color: grey
+}
 
 
 
