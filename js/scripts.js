@@ -139,8 +139,8 @@
         const portfolioDetail = [
             {
                 title: "Pure Products",
-                imgTop: "images/pureproduct-screenshot.png",
-                imgBottom: "images/pureproduct-screenshot.png",
+                imgTop: "images/pure-products-1.png",
+                imgBottom: "images/pure-products-2.jpg",
                 detailTop: "Pure Products is an application that helps people identify and find cosmetic products that are safe and gentle for your skin. The application uses two different database to compare and rate each ingredient in the product.",
                 detailBottom: "Pure Products utilizes React.js, PHP, MySQL, AWS, and API's to help people find the right cosmetic product for their skins!",
                 live: `<div><i class="fa fa-desktop"></i><a href="http://findpureproducts.com" target="_blank">Live</a></div>`,
