@@ -154,6 +154,15 @@
                 detailBottom: "Laguna Matata utilizds JavaScript, JQuery, AJAX, Goole API, Yelp API, and Dark Sky API to help poeple find the best beach and where to go around it!",
                 live:`<div><i class="fa fa-desktop"></i><a href="http://laguna-matata.harrisonbchen.com" target="_blank">Live</a></div>`,
                 code:`<div><i class="fa fa-github"></i> <a href="https://github.com/harrison8024/Laguna-Matata" target="_blank">Github</a></div>`,
+            },
+            {
+                title: "Online Student Application",
+                imgTop:"images/intrvws.com-page1.png",
+                imgBottom:"images/intrvws.com-page2.png",
+                detailTop:"This application was built for the intent to help streamline the application process for the USC Pharmaceutical Industry Fellowship programs with Allergan.",
+                detailBottom: "The application was built in React.js with Materialize for the Frontend. For the Backend, we use PHP to built our RESTful APIs, and MySQL and Firebase Bucket for our database. ",
+                live:`<div><i class="fa fa-desktop"></i><a href="https://allergan-usc.intrvws.com/" target="_blank">Live</a></div>`,
+                code:`<div><i class="fa fa-github"></i> <a href="https://github.com/ddonjuan/candidates-interview-scheduling" target="_blank">Github</a></div>`,
             }
         ]
 
